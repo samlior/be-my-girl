@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/funstaff">
+        <file>funstaff.ico</file>
+        <file>quit.ico</file>
+		<file>arr_down.png</file>
+		<file>arr_right.png</file>
+		<file>arr_left.png</file>
+    </qresource>
+</RCC>
