@@ -53,7 +53,11 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 
 	connect(quit, &QAction::triggered, [this]() mutable
 		{
-			this->close();
+			this->showNormal();
+			this->activateWindow();
+			static bool flag = true;
+			QMessageBox::information(this, QStringLiteral("(* ￣︿￣)"), flag ? QStringLiteral("我拒绝!             ") : QStringLiteral("我就不!             "), QMessageBox::Ok);
+			flag = !flag;
 		});
 
 	connect(&m_systray, &QSystemTrayIcon::activated, this, [this](QSystemTrayIcon::ActivationReason ar) mutable
@@ -63,6 +67,13 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 				this->showNormal();
 				this->activateWindow();
 			}
+		});
+
+	connect(m_ui.pushButtonConfirm, &QPushButton::clicked, this, [this]() mutable
+		{
+			QMessageBox::information(this, QStringLiteral("ヾ(≧▽≦*)o"), QStringLiteral("嘻嘻嘻, 你同意了"), QMessageBox::Ok);
+			m_shouldClose = true;
+			this->close();
 		});
 
 	std::vector<QRect> rects = { QRect(530, 410, 61, 31), QRect(40, 180, 61, 31), QRect(630, 240, 61, 31), QRect(410, 300, 61, 31), QRect(220, 80, 61, 31), QRect(470, 60, 61, 31) };
@@ -100,7 +111,16 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 
 void funstaff::closeEvent(QCloseEvent* event)
 {
-	this->hide();
+	if (m_shouldClose)
+	{
+		event->accept();
+		emit sig_close();
+	}
+	else
+	{
+		this->hide();
+		event->ignore();
+	}
 }
 
 void funstaff::hide_tray_icon()

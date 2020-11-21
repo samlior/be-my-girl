@@ -41,10 +41,14 @@ public:
 
 	void closeEvent(QCloseEvent * event);
 
+Q_SIGNALS:
+	void sig_close();
+
 protected:
 	virtual bool nativeEvent(const QByteArray& eventType, void* message, long* result) override;
 
 private:
+	bool m_shouldClose = false;
 	Ui::mainClass m_ui;
 	QSystemTrayIcon m_systray{ this };
 	std::vector<DisappearButton*> m_buttons;
