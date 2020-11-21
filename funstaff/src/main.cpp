@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 
 	QCoreApplication::setOrganizationName("Zhaozhao");
-	QCoreApplication::setApplicationName(QStringLiteral("Xixixi"));
+	QCoreApplication::setApplicationName(QStringLiteral("嘻嘻嘻Xixixi"));
 	QCoreApplication::setApplicationVersion("1.0.0");
 
 #ifdef _WIN32

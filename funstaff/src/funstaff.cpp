@@ -23,13 +23,23 @@ void DisappearButton::enterEvent(QEvent* event)
 	emit mouse_enter(m_id);
 }
 
+static bool makeQMessageBox(QWidget* parent, const QString& strText, const QString& strYes, const QString& strNo) {
+	QMessageBox box(parent);
+	box.setWindowTitle(QStringLiteral("ヾ(≧O≦)〃嗷~"));
+	box.setText(strText);
+	box.setIcon(QMessageBox::Icon::Information);
+	box.addButton(strYes, QMessageBox::YesRole);
+	box.addButton(strNo, QMessageBox::NoRole);
+	return box.exec() == 0;
+}
+
 funstaff::funstaff(QWidget* parent /* = 0 */)
 	: QMainWindow(parent)
 {
 	m_ui.setupUi(this);
 
 	// 设置软件标题.
-	this->setWindowTitle(QCoreApplication::applicationName() + "-v" + QCoreApplication::applicationVersion());
+	this->setWindowTitle(QCoreApplication::applicationName());
 
 	// 设置任务栏相关.
 	m_systray.setToolTip(QStringLiteral("Funstaff"));
@@ -118,7 +128,33 @@ void funstaff::closeEvent(QCloseEvent* event)
 	}
 	else
 	{
-		this->hide();
+		auto result =
+			makeQMessageBox(this, QStringLiteral("你确定要退出吗?"), QStringLiteral("没错"), QStringLiteral("我再想想")) &&
+			makeQMessageBox(this, QStringLiteral("你真的确定要退出吗?"), QStringLiteral("是的"), QStringLiteral("我再考虑一下")) &&
+			makeQMessageBox(this, QStringLiteral("你就这么抛弃我了? 你的良心不会痛吗?"), QStringLiteral("不会"), QStringLiteral("好吧好吧, 给你点面子")) &&
+			makeQMessageBox(this, QStringLiteral("拜托你点一下同意吧, 不然我会被打哦"), QStringLiteral("你被打和我有什么关系?"), QStringLiteral("我再考虑考虑")) &&
+			makeQMessageBox(this, QStringLiteral("求你了, 同意吧"), QStringLiteral("我拒绝"), QStringLiteral("好吧, 我再想想")) &&
+			makeQMessageBox(this, QStringLiteral("你这个坏人! o(≧口≦)o"), QStringLiteral("我就不"), QStringLiteral("我再想想"));
+
+		if (result)
+		{
+			QMessageBox::information(this, QStringLiteral("o(╥﹏╥)o"), QStringLiteral("好吧, 你赢了"));
+			this->hide();
+
+			QTimer* timer = new QTimer(this);
+			timer->setInterval(2000);
+			connect(timer, &QTimer::timeout, [this, timer]()
+				{
+					timer->stop();
+					if (!this->isVisible())
+					{
+						this->showNormal();
+						this->activateWindow();
+						QMessageBox::information(this, QStringLiteral("φ(゜▽゜*)φ"), QStringLiteral("啊哈! 没想到吧, 我还在！"));
+					}
+				});
+			timer->start();
+		}
 		event->ignore();
 	}
 }
