@@ -21,38 +21,57 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>360</y>
+      <y>380</y>
       <width>121</width>
       <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>华文彩云</family>
       <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">:enabled {
+font: 18pt &quot;华文彩云&quot;;
+color: black;
+border-width: 5px;
+border-style: solid;
+border-radius: 15px;
+}
+
+:hover{
+font: 18pt &quot;华文彩云&quot;;
+color: red;
+border-width: 5px;
+border-style: solid;
+border-radius: 15px;
+}
+
+:pressed{
+font: 20pt &quot;华文彩云&quot;;
+color: red;
+border-width: 7px;
+border-style: solid;
+border-radius: 15px;
+}
+
+
+</string>
     </property>
     <property name="text">
      <string>同意</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonCancel">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>360</y>
-      <width>111</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>不同意</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>130</y>
+      <x>240</x>
+      <y>110</y>
       <width>201</width>
       <height>61</height>
      </rect>
@@ -75,16 +94,16 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>220</y>
-      <width>151</width>
-      <height>61</height>
+      <x>20</x>
+      <y>230</y>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>18</pointsize>
+      <pointsize>20</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -99,16 +118,16 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>180</y>
-      <width>201</width>
-      <height>61</height>
+      <x>530</x>
+      <y>190</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>18</pointsize>
+      <pointsize>14</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -123,16 +142,16 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>60</y>
-      <width>201</width>
+      <x>100</x>
+      <y>30</y>
+      <width>141</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>18</pointsize>
+      <pointsize>15</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -147,16 +166,16 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>60</y>
-      <width>201</width>
-      <height>61</height>
+      <x>310</x>
+      <y>50</y>
+      <width>131</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>18</pointsize>
+      <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -171,16 +190,16 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>280</y>
-      <width>201</width>
-      <height>61</height>
+      <x>490</x>
+      <y>110</y>
+      <width>151</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>18</pointsize>
+      <pointsize>16</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -195,16 +214,16 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>150</y>
-      <width>201</width>
-      <height>61</height>
+      <x>80</x>
+      <y>140</y>
+      <width>111</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>18</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -219,8 +238,8 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>300</y>
+      <x>80</x>
+      <y>310</y>
       <width>41</width>
       <height>61</height>
      </rect>
@@ -238,8 +257,8 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>300</y>
+      <x>110</x>
+      <y>310</y>
       <width>41</width>
       <height>61</height>
      </rect>
@@ -257,8 +276,8 @@
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>300</y>
+      <x>140</x>
+      <y>310</y>
       <width>41</width>
       <height>61</height>
      </rect>
@@ -276,8 +295,8 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>300</y>
+      <x>170</x>
+      <y>310</y>
       <width>41</width>
       <height>61</height>
      </rect>
@@ -295,8 +314,8 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>350</y>
+      <x>10</x>
+      <y>380</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -311,8 +330,8 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>380</y>
+      <x>10</x>
+      <y>410</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -327,8 +346,8 @@
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>410</y>
+      <x>10</x>
+      <y>440</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -344,7 +363,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>350</y>
+      <y>370</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -360,7 +379,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>380</y>
+      <y>400</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -376,7 +395,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>410</y>
+      <y>430</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -388,8 +407,159 @@
      <pixmap resource="funstaff.qrc">:/funstaff/arr_left.png</pixmap>
     </property>
    </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>180</y>
+      <width>141</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;XXX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>220</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/flower.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>180</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/rainbow.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>20</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/ice_cream.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>260</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/flower.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/flower.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>370</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/cake.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>344</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/ice_cream.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>260</y>
+      <width>101</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="funstaff.qrc">:/funstaff/cake2.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources>
   <include location="funstaff.qrc"/>

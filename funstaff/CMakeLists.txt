@@ -44,6 +44,7 @@ if(WIN32 AND MSVC AND ENABLE_QT_STATIC)
 		Qt5::ThemeSupport
 		Qt5::PlatformCompositorSupport
 		Qt5::WindowsUIAutomationSupport
+		Qt5::QGifPlugin
 	)
 
 	if (WIN32)

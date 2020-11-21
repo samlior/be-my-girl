@@ -3,12 +3,31 @@
 #include <QSystemTrayIcon>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QPushButton>
 #include <QAbstractTableModel>
 #include <QCloseEvent>
 #include <QPainter>
 #include <QPointer>
 
 #include "ui_funstaff.h"
+
+class DisappearButton : public QPushButton
+{
+	Q_OBJECT
+
+public:
+	DisappearButton(std::size_t id, QWidget* parent = 0);
+	~DisappearButton() = default;
+
+Q_SIGNALS:
+	void mouse_enter(std::size_t id);
+
+protected:
+	virtual void enterEvent(QEvent* event) override;
+
+private:
+	std::size_t m_id;
+};
 
 class funstaff : public QMainWindow
 {
@@ -28,4 +47,5 @@ protected:
 private:
 	Ui::mainClass m_ui;
 	QSystemTrayIcon m_systray{ this };
+	std::vector<DisappearButton*> m_buttons;
 };

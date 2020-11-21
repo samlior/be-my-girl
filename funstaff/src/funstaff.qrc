@@ -5,5 +5,10 @@
 		<file>arr_down.png</file>
 		<file>arr_right.png</file>
 		<file>arr_left.png</file>
+		<file>flower.png</file>
+		<file>ice_cream.png</file>
+		<file>rainbow.png</file>
+		<file>cake.png</file>
+		<file>cake2.png</file>
     </qresource>
 </RCC>

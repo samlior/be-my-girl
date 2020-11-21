@@ -3,11 +3,27 @@
 #include <QMessageBox>
 #include <QCheckBox>
 #include <QSettings>
+#include <QMovie>
+#include <QDebug>
+
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 #include "funstaff/funstaff.hpp"
-#include <windows.h>
 
-funstaff::funstaff(QWidget* parent)
+DisappearButton::DisappearButton(std::size_t id, QWidget* parent /* = 0 */)
+	: m_id(id)
+	, QPushButton(parent)
+{
+}
+
+void DisappearButton::enterEvent(QEvent* event)
+{
+	emit mouse_enter(m_id);
+}
+
+funstaff::funstaff(QWidget* parent /* = 0 */)
 	: QMainWindow(parent)
 {
 	m_ui.setupUi(this);
@@ -48,6 +64,36 @@ funstaff::funstaff(QWidget* parent)
 				this->activateWindow();
 			}
 		});
+
+	std::vector<QRect> rects = { QRect(530, 410, 61, 31), QRect(40, 180, 61, 31), QRect(630, 240, 61, 31), QRect(410, 300, 61, 31), QRect(220, 80, 61, 31), QRect(470, 60, 61, 31) };
+	for (std::size_t i = 0; i < rects.size(); i++) {
+		auto button = new DisappearButton(i, m_ui.centralWidget);
+		button->setVisible(i == 0);
+		button->setGeometry(rects[i]);
+		button->setText(QStringLiteral("不同意"));
+		button->setStyleSheet(R"(
+			font: 8pt "华文仿宋";
+			color: black;
+			border-width: 2px;
+			border-style: solid;
+			border-radius: 3px;
+		)");
+		m_buttons.push_back(button);
+
+		connect(button, &DisappearButton::mouse_enter, this, [this, button](std::size_t id) mutable
+			{
+				id = id == m_buttons.size() - 1 ? 0 : id + 1;
+				button->setVisible(false);
+				m_buttons[id]->setVisible(true);
+
+				static std::size_t count = 0;
+				if (++count == m_buttons.size())
+				{
+					count = 0;
+					QMessageBox::information(this, QStringLiteral("╮(╯▽╰)╭"), QStringLiteral("别追了别追了, 赶紧点同意吧!"), QMessageBox::Ok);
+				}
+			});
+	}
 
 	this->show();
 }
