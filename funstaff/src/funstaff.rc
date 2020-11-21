@@ -35,8 +35,8 @@ IDI_ICON1               ICON                    "funstaff.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2020,11,20,1329
- PRODUCTVERSION 2020,11,20,0
+ FILEVERSION 2020,11,21,879
+ PRODUCTVERSION 2020,11,21,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -51,14 +51,14 @@ BEGIN
     BEGIN
         BLOCK "080404b0"
         BEGIN
-            VALUE "CompanyName", "Zhaozhao Company"
+            VALUE "CompanyName", "Samlior Company"
             VALUE "FileDescription", "Funstaff"
-            VALUE "FileVersion", "2020,11,20,1329"
+            VALUE "FileVersion", "2020,11,21,879"
             VALUE "InternalName", "funstaff"
-            VALUE "LegalCopyright", "Copyright ? 2019 Zhaozhao Technology, Inc."
-            VALUE "OriginalFilename", "funstaff.exe"
+            VALUE "LegalCopyright", "Copyright ? 2020 Samlior Technology, Inc."
+            VALUE "OriginalFilename", "ÎûÎûÎûXixixi.exe"
             VALUE "ProductName", "Funstaff"
-            VALUE "ProductVersion", "2020,11,20,0"
+            VALUE "ProductVersion", "2020,11,21,0"
         END
     END
     BLOCK "VarFileInfo"

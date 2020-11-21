@@ -51,12 +51,12 @@ BEGIN
     BEGIN
         BLOCK "080404b0"
         BEGIN
-            VALUE "CompanyName", "Zhaozhao Company"
+            VALUE "CompanyName", "Samlior Company"
             VALUE "FileDescription", "Funstaff"
             VALUE "FileVersion", "@VERSION_MAJOR@,@VERSION_MINOR@,@VERSION_TINY@,@VERSION_BUILD@"
             VALUE "InternalName", "funstaff"
-            VALUE "LegalCopyright", "Copyright ? 2019 Zhaozhao Technology, Inc."
-            VALUE "OriginalFilename", "funstaff.exe"
+            VALUE "LegalCopyright", "Copyright ? 2020 Samlior Technology, Inc."
+            VALUE "OriginalFilename", "ÎûÎûÎûXixixi.exe"
             VALUE "ProductName", "Funstaff"
             VALUE "ProductVersion", "@VERSION_MAJOR@,@VERSION_MINOR@,@VERSION_TINY@,0"
         END

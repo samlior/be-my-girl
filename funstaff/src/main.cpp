@@ -48,9 +48,10 @@ int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
 
-	QCoreApplication::setOrganizationName("Zhaozhao");
+	QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+	QCoreApplication::setOrganizationName("Samlior");
 	QCoreApplication::setApplicationName(QStringLiteral("嘻嘻嘻Xixixi"));
-	QCoreApplication::setApplicationVersion("1.0.0");
+	QCoreApplication::setApplicationVersion("0.0.1");
 
 #ifdef _WIN32
 	// 使用互斥锁

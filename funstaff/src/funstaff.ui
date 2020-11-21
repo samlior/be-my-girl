@@ -78,10 +78,10 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>幼圆</family>
+      <pointsize>15</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -102,10 +102,10 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>20</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>华文琥珀</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -118,7 +118,7 @@ border-radius: 15px;
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>490</x>
       <y>190</y>
       <width>141</width>
       <height>41</height>
@@ -126,10 +126,10 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>楷体</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -150,10 +150,10 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>方正舒体</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -174,10 +174,10 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>华文行楷</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -198,10 +198,10 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>华文宋体</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -222,8 +222,8 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>12</pointsize>
+      <family>等线</family>
+      <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -418,11 +418,12 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <pointsize>30</pointsize>
+      <family>黑体</family>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;XXX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff007f;&quot;&gt;Xixixi&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
