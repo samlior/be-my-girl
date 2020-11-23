@@ -2,6 +2,8 @@
 
 Confess to your girl!
 
+![avatar](/img/gif.gif)
+
 ## Build
 
 ```
