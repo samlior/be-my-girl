@@ -1,4 +1,4 @@
-ï»¿// Microsoft Visual C++ generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "winresrc.h"
 
@@ -14,7 +14,7 @@
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
-// ä¸­æ–‡(ç®€ä½“ï¼Œä¸­å›½) resources
+// ÖÐÎÄ(¼òÌå£¬ÖÐ¹ú) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
@@ -56,7 +56,7 @@ BEGIN
             VALUE "FileVersion", "@VERSION_MAJOR@,@VERSION_MINOR@,@VERSION_TINY@,@VERSION_BUILD@"
             VALUE "InternalName", "funstaff"
             VALUE "LegalCopyright", "Copyright ? 2020 Samlior Technology, Inc."
-            VALUE "OriginalFilename", "å˜»å˜»å˜»Xixixi.exe"
+            VALUE "OriginalFilename", "ÎûÎûÎûXixixi.exe"
             VALUE "ProductName", "Funstaff"
             VALUE "ProductVersion", "@VERSION_MAJOR@,@VERSION_MINOR@,@VERSION_TINY@,0"
         END
@@ -92,7 +92,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#endif    // ä¸­æ–‡(ç®€ä½“ï¼Œä¸­å›½) resources
+#endif    // ÖÐÎÄ(¼òÌå£¬ÖÐ¹ú) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

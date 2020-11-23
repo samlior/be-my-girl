@@ -33,13 +33,14 @@ static bool makeQMessageBox(QWidget* parent, const QString& strText, const QStri
 	return box.exec() == 0;
 }
 
-template<class T>
-static void installFont(T* p, int size, const QString& fontName)
-{
-	QFont font(fontName);
-	font.setPixelSize(size);
-	p->setFont(font);
-}
+// template<class T>
+// static void installFont(T* p, int size, const QString& fontName)
+// {
+// 	return;
+// 	QFont font(fontName);
+// 	font.setPixelSize(size);
+// 	p->setFont(font);
+// }
 
 funstaff::funstaff(QWidget* parent /* = 0 */)
 	: QMainWindow(parent)
@@ -101,12 +102,12 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 		button->setGeometry(rects[i]);
 		button->setText(QStringLiteral("不同意"));
 		button->setStyleSheet(R"(
+			font: 8pt "华文仿宋";
 			color: black;
 			border-width: 2px;
 			border-style: solid;
 			border-radius: 3px;
 		)");
-		installFont(button, 16, QStringLiteral("华文仿宋"));
 		m_buttons.push_back(button);
 
 		connect(button, &DisappearButton::mouse_enter, this, [this, button](std::size_t id) mutable
@@ -123,16 +124,6 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 				}
 			});
 	}
-
-	installFont(m_ui.label, 27, QStringLiteral("幼圆"));
-	installFont(m_ui.label_18, 31, QStringLiteral("黑体"));
-	installFont(m_ui.label_2, 25, QStringLiteral("华文琥珀"));
-	installFont(m_ui.label_3, 25, QStringLiteral("楷体"));
-	installFont(m_ui.label_4, 23, QStringLiteral("华文宋体"));
-	installFont(m_ui.label_5, 24, QStringLiteral("华文行楷"));
-	installFont(m_ui.label_6, 18, QStringLiteral("方正舒体"));
-	installFont(m_ui.label_7, 26, QStringLiteral("等线"));
-	installFont(m_ui.pushButtonConfirm, 33, QStringLiteral("华文彩云"));
 
 	this->show();
 }
