@@ -278,4 +278,4 @@ doc/package.json
 
 .ccls-cache
 compile_commands.json
-superminer/src/superminer.rc
+funstaff/src/funstaff.rc

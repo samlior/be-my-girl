@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
 
-	QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+	// QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 	QCoreApplication::setOrganizationName("Samlior");
 	QCoreApplication::setApplicationName(QStringLiteral("嘻嘻嘻Xixixi"));
 	QCoreApplication::setApplicationVersion("0.0.1");

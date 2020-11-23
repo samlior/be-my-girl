@@ -94,7 +94,7 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 			this->close();
 		});
 
-	std::vector<QRect> rects = { QRect(530, 410, 61, 31), QRect(40, 180, 61, 31), QRect(630, 240, 61, 31), QRect(410, 300, 61, 31), QRect(220, 80, 61, 31), QRect(470, 60, 61, 31) };
+	std::vector<QRect> rects = { QRect(530, 410, 61, 31), QRect(40, 180, 61, 31), QRect(630, 40, 61, 31), QRect(410, 370, 61, 31), QRect(220, 80, 61, 31), QRect(470, 60, 61, 31) };
 	for (std::size_t i = 0; i < rects.size(); i++) {
 		auto button = new DisappearButton(i, m_ui.centralWidget);
 		button->setVisible(i == 0);
