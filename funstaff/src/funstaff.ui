@@ -541,20 +541,17 @@ border-radius: 15px;
      <pixmap resource="funstaff.qrc">:/funstaff/ice_cream.png</pixmap>
     </property>
    </widget>
-   <widget class="QLabel" name="label_26">
+   <widget class="QLabel" name="labelGif">
     <property name="geometry">
      <rect>
       <x>520</x>
       <y>260</y>
-      <width>101</width>
+      <width>111</width>
       <height>111</height>
      </rect>
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="funstaff.qrc">:/funstaff/cake2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

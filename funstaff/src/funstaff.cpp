@@ -1,10 +1,7 @@
 ﻿#include <QTimer>
 #include <QMenu>
 #include <QMessageBox>
-#include <QCheckBox>
-#include <QSettings>
 #include <QMovie>
-#include <QDebug>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -124,6 +121,10 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 				}
 			});
 	}
+
+	auto movie = new QMovie(":/funstaff/cake.gif");
+	m_ui.labelGif->setMovie(movie);
+	movie->start();
 
 	this->show();
 }
