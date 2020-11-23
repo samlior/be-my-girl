@@ -1,4 +1,4 @@
-#include <QTimer>
+ï»¿#include <QTimer>
 #include <QMenu>
 #include <QMessageBox>
 #include <QCheckBox>
@@ -25,7 +25,7 @@ void DisappearButton::enterEvent(QEvent* event)
 
 static bool makeQMessageBox(QWidget* parent, const QString& strText, const QString& strYes, const QString& strNo) {
 	QMessageBox box(parent);
-	box.setWindowTitle(QStringLiteral("©d(¨RO¨Q)¡¨à»~"));
+	box.setWindowTitle(QStringLiteral("ãƒ¾(â‰§Oâ‰¦)ã€ƒå—·~"));
 	box.setText(strText);
 	box.setIcon(QMessageBox::Icon::Information);
 	box.addButton(strYes, QMessageBox::YesRole);
@@ -46,17 +46,17 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 {
 	m_ui.setupUi(this);
 
-	// ÉèÖÃÈí¼þ±êÌâ.
+	// è®¾ç½®è½¯ä»¶æ ‡é¢˜.
 	this->setWindowTitle(QCoreApplication::applicationName());
 
-	// ÉèÖÃÈÎÎñÀ¸Ïà¹Ø.
+	// è®¾ç½®ä»»åŠ¡æ ç›¸å…³.
 	m_systray.setToolTip(QStringLiteral("Funstaff"));
 	m_systray.setIcon(QIcon(":/funstaff/funstaff.ico"));
 
 	QMenu* menu = new QMenu();
-	QAction* reopen = new QAction(QStringLiteral(" ÏÔ Ê¾ (&o)"), this);
+	QAction* reopen = new QAction(QStringLiteral(" æ˜¾ ç¤º (&o)"), this);
 	reopen->setIcon(QIcon(":/funstaff/funstaff.ico"));
-	QAction* quit = new QAction(QStringLiteral(" ÍË ³ö (&q)"), this);
+	QAction* quit = new QAction(QStringLiteral(" é€€ å‡º (&q)"), this);
 	quit->setIcon(QIcon(":/funstaff/quit.ico"));
 	menu->addAction(reopen);
 	menu->addAction(quit);
@@ -74,7 +74,7 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 			this->showNormal();
 			this->activateWindow();
 			static bool flag = true;
-			QMessageBox::information(this, QStringLiteral("(* £þ¦ä£þ)"), flag ? QStringLiteral("ÎÒ¾Ü¾ø!             ") : QStringLiteral("ÎÒ¾Í²»!             "), QMessageBox::Ok);
+			QMessageBox::information(this, QStringLiteral("(* ï¿£ï¸¿ï¿£)"), flag ? QStringLiteral("æˆ‘æ‹’ç»!             ") : QStringLiteral("æˆ‘å°±ä¸!             "), QMessageBox::Ok);
 			flag = !flag;
 		});
 
@@ -89,7 +89,7 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 
 	connect(m_ui.pushButtonConfirm, &QPushButton::clicked, this, [this]() mutable
 		{
-			QMessageBox::information(this, QStringLiteral("©d(¨R¨Œ¨Q*)o"), QStringLiteral("ÎûÎûÎû, ÄãÍ¬ÒâÁË"), QMessageBox::Ok);
+			QMessageBox::information(this, QStringLiteral("ãƒ¾(â‰§â–½â‰¦*)o"), QStringLiteral("å˜»å˜»å˜», ä½ åŒæ„äº†"), QMessageBox::Ok);
 			m_shouldClose = true;
 			this->close();
 		});
@@ -99,14 +99,14 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 		auto button = new DisappearButton(i, m_ui.centralWidget);
 		button->setVisible(i == 0);
 		button->setGeometry(rects[i]);
-		button->setText(QStringLiteral("²»Í¬Òâ"));
+		button->setText(QStringLiteral("ä¸åŒæ„"));
 		button->setStyleSheet(R"(
 			color: black;
 			border-width: 2px;
 			border-style: solid;
 			border-radius: 3px;
 		)");
-		installFont(button, 16, QStringLiteral("»ªÎÄ·ÂËÎ"));
+		installFont(button, 16, QStringLiteral("åŽæ–‡ä»¿å®‹"));
 		m_buttons.push_back(button);
 
 		connect(button, &DisappearButton::mouse_enter, this, [this, button](std::size_t id) mutable
@@ -119,20 +119,20 @@ funstaff::funstaff(QWidget* parent /* = 0 */)
 				if (++count == m_buttons.size())
 				{
 					count = 0;
-					QMessageBox::information(this, QStringLiteral("¨r(¨s¨Œ¨t)¨q"), QStringLiteral("±ð×·ÁË±ð×·ÁË, ¸Ï½ôµãÍ¬Òâ°É!"), QMessageBox::Ok);
+					QMessageBox::information(this, QStringLiteral("â•®(â•¯â–½â•°)â•­"), QStringLiteral("åˆ«è¿½äº†åˆ«è¿½äº†, èµ¶ç´§ç‚¹åŒæ„å§!"), QMessageBox::Ok);
 				}
 			});
 	}
 
-	installFont(m_ui.label, 27, QStringLiteral("Ó×Ô²"));
-	installFont(m_ui.label_18, 31, QStringLiteral("ºÚÌå"));
-	installFont(m_ui.label_2, 25, QStringLiteral("»ªÎÄçúçê"));
-	installFont(m_ui.label_3, 25, QStringLiteral("¿¬Ìå"));
-	installFont(m_ui.label_4, 23, QStringLiteral("»ªÎÄËÎÌå"));
-	installFont(m_ui.label_5, 24, QStringLiteral("»ªÎÄÐÐ¿¬"));
-	installFont(m_ui.label_6, 18, QStringLiteral("·½ÕýÊæÌå"));
-	installFont(m_ui.label_7, 26, QStringLiteral("µÈÏß"));
-	installFont(m_ui.pushButtonConfirm, 33, QStringLiteral("»ªÎÄ²ÊÔÆ"));
+	installFont(m_ui.label, 27, QStringLiteral("å¹¼åœ†"));
+	installFont(m_ui.label_18, 31, QStringLiteral("é»‘ä½“"));
+	installFont(m_ui.label_2, 25, QStringLiteral("åŽæ–‡ç¥ç€"));
+	installFont(m_ui.label_3, 25, QStringLiteral("æ¥·ä½“"));
+	installFont(m_ui.label_4, 23, QStringLiteral("åŽæ–‡å®‹ä½“"));
+	installFont(m_ui.label_5, 24, QStringLiteral("åŽæ–‡è¡Œæ¥·"));
+	installFont(m_ui.label_6, 18, QStringLiteral("æ–¹æ­£èˆ’ä½“"));
+	installFont(m_ui.label_7, 26, QStringLiteral("ç­‰çº¿"));
+	installFont(m_ui.pushButtonConfirm, 33, QStringLiteral("åŽæ–‡å½©äº‘"));
 
 	this->show();
 }
@@ -147,16 +147,16 @@ void funstaff::closeEvent(QCloseEvent* event)
 	else
 	{
 		auto result =
-			makeQMessageBox(this, QStringLiteral("ÄãÈ·¶¨ÒªÍË³öÂð?"), QStringLiteral("Ã»´í"), QStringLiteral("ÎÒÔÙÏëÏë")) &&
-			makeQMessageBox(this, QStringLiteral("ÄãÕæµÄÈ·¶¨ÒªÍË³öÂð?"), QStringLiteral("ÊÇµÄ"), QStringLiteral("ÎÒÔÙ¿¼ÂÇÒ»ÏÂ")) &&
-			makeQMessageBox(this, QStringLiteral("Äã¾ÍÕâÃ´Å×ÆúÎÒÁË? ÄãµÄÁ¼ÐÄ²»»áÍ´Âð?"), QStringLiteral("²»»á"), QStringLiteral("ºÃ°ÉºÃ°É, ¸øÄãµãÃæ×Ó")) &&
-			makeQMessageBox(this, QStringLiteral("°ÝÍÐÄãµãÒ»ÏÂÍ¬Òâ°É, ²»È»ÎÒ»á±»´òÅ¶"), QStringLiteral("Äã±»´òºÍÎÒÓÐÊ²Ã´¹ØÏµ?"), QStringLiteral("ÎÒÔÙ¿¼ÂÇ¿¼ÂÇ")) &&
-			makeQMessageBox(this, QStringLiteral("ÇóÄãÁË, Í¬Òâ°É"), QStringLiteral("ÎÒ¾Ü¾ø"), QStringLiteral("ºÃ°É, ÎÒÔÙÏëÏë")) &&
-			makeQMessageBox(this, QStringLiteral("ÄãÕâ¸ö»µÈË! o(¨R¿Ú¨Q)o"), QStringLiteral("ÎÒ¾Í²»"), QStringLiteral("ÎÒÔÙÏëÏë"));
+			makeQMessageBox(this, QStringLiteral("ä½ ç¡®å®šè¦é€€å‡ºå—?"), QStringLiteral("æ²¡é”™"), QStringLiteral("æˆ‘å†æƒ³æƒ³")) &&
+			makeQMessageBox(this, QStringLiteral("ä½ çœŸçš„ç¡®å®šè¦é€€å‡ºå—?"), QStringLiteral("æ˜¯çš„"), QStringLiteral("æˆ‘å†è€ƒè™‘ä¸€ä¸‹")) &&
+			makeQMessageBox(this, QStringLiteral("ä½ å°±è¿™ä¹ˆæŠ›å¼ƒæˆ‘äº†? ä½ çš„è‰¯å¿ƒä¸ä¼šç—›å—?"), QStringLiteral("ä¸ä¼š"), QStringLiteral("å¥½å§å¥½å§, ç»™ä½ ç‚¹é¢å­")) &&
+			makeQMessageBox(this, QStringLiteral("æ‹œæ‰˜ä½ ç‚¹ä¸€ä¸‹åŒæ„å§, ä¸ç„¶æˆ‘ä¼šè¢«æ‰“å“¦"), QStringLiteral("ä½ è¢«æ‰“å’Œæˆ‘æœ‰ä»€ä¹ˆå…³ç³»?"), QStringLiteral("æˆ‘å†è€ƒè™‘è€ƒè™‘")) &&
+			makeQMessageBox(this, QStringLiteral("æ±‚ä½ äº†, åŒæ„å§"), QStringLiteral("æˆ‘æ‹’ç»"), QStringLiteral("å¥½å§, æˆ‘å†æƒ³æƒ³")) &&
+			makeQMessageBox(this, QStringLiteral("ä½ è¿™ä¸ªåäºº! o(â‰§å£â‰¦)o"), QStringLiteral("æˆ‘å°±ä¸"), QStringLiteral("æˆ‘å†æƒ³æƒ³"));
 
 		if (result)
 		{
-			QMessageBox::information(this, QStringLiteral("o(¨i©n¨i)o"), QStringLiteral("ºÃ°É, ÄãÓ®ÁË"));
+			QMessageBox::information(this, QStringLiteral("o(â•¥ï¹â•¥)o"), QStringLiteral("å¥½å§, ä½ èµ¢äº†"));
 			this->hide();
 
 			QTimer* timer = new QTimer(this);
@@ -168,7 +168,7 @@ void funstaff::closeEvent(QCloseEvent* event)
 					{
 						this->showNormal();
 						this->activateWindow();
-						QMessageBox::information(this, QStringLiteral("¦Õ(©b¨Œ©b*)¦Õ"), QStringLiteral("°¡¹þ! Ã»Ïëµ½°É, ÎÒ»¹ÔÚ£¡"));
+						QMessageBox::information(this, QStringLiteral("Ï†(ã‚œâ–½ã‚œ*)Ï†"), QStringLiteral("å•Šå“ˆ! æ²¡æƒ³åˆ°å§, æˆ‘è¿˜åœ¨ï¼"));
 					}
 				});
 			timer->start();

@@ -1,4 +1,4 @@
-<RCC>
+﻿<RCC>
     <qresource prefix="/funstaff">
         <file>funstaff.ico</file>
         <file>quit.ico</file>

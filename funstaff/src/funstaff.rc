@@ -35,8 +35,8 @@ IDI_ICON1               ICON                    "funstaff.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2020,11,21,879
- PRODUCTVERSION 2020,11,21,0
+ FILEVERSION 2020,11,23,841
+ PRODUCTVERSION 2020,11,23,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -53,12 +53,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Samlior Company"
             VALUE "FileDescription", "Funstaff"
-            VALUE "FileVersion", "2020,11,21,879"
+            VALUE "FileVersion", "2020,11,23,841"
             VALUE "InternalName", "funstaff"
             VALUE "LegalCopyright", "Copyright ? 2020 Samlior Technology, Inc."
             VALUE "OriginalFilename", "ÎûÎûÎûXixixi.exe"
             VALUE "ProductName", "Funstaff"
-            VALUE "ProductVersion", "2020,11,21,0"
+            VALUE "ProductVersion", "2020,11,23,0"
         END
     END
     BLOCK "VarFileInfo"
